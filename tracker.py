@@ -1,4 +1,4 @@
-# Expense Tracker Installment 2, Author: Mark Joshua L. Apor, Tracker takes input and shows summary
+# Expense Tracker Installment 3, Author: Mark Joshua L. Apor, Tracker takes input and shows summary
 print("=" * 40)
 print("\tEXPENSE TRACKER")
 print("\tKnow where your money goes...")
