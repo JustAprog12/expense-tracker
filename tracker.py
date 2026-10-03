@@ -17,18 +17,28 @@ item1 = input("First expense? ")
 amount1 = float(input("Amount? "))
 item2 = input("Second expense? ")
 amount2 = float(input("Amount? "))
+Tax_Rate = float(input("Tax Rate %? "))
+budget = float(input("What's your budget? "))
 
 
+average = (amount1 + amount2) / 2
 total = amount1 + amount2
-average = total / 2
+tax = total * (Tax_Rate / 100)
+grandtotal = total + tax
+overbudget = bool(budget < grandtotal)
+remaining_budget = budget - grandtotal
 
-
+print("-" * 40)
 print("SUMMARY")
+print(f"- {item1}:\t\t${amount1}")
+print(f"- {item2}:\t\t${amount2}")
+print(f"Subtotal:\t\t${total}")
+print(f"Average:\t\t${average}")
+print(f"Tax {Tax_Rate}%:\t\t${tax}")
+print(f"Grand Total:\t\t${grandtotal}")
+print(f"Over Budget?:\t\t{overbudget}")
+print(f"Left in budget:\t\t${remaining_budget}")
 print("-" * 40)
-print(f"{item1}:\t\t${amount1}")
-print(f"{item2}:\t\t${amount2}")
-print(f"Total spent:\t${total}")
-print(f"Average:\t${average}")
-print("-" * 40)
-print("Made by: Mark Joshua L. Apor | Installment 2")
+print("Made by: Mark Joshua L. Apor | Installment 3")
 print("=" * 40)
+
